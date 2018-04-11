@@ -82,10 +82,10 @@ public class ThreadedBinaryTree {
             parent.leftThread = 1;
             parent.leftNode = newnode;
         } else {
+            newnode.rightNode = previous;
+            newnode.leftNode = parent;
             parent.rightThread = 1;
             parent.rightNode = newnode;
-            newnode.leftNode = parent;
-            newnode.rightNode = previous;
         }
         return;
     }
