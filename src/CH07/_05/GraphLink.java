@@ -12,5 +12,26 @@ class Node {
     }
 }
 public class GraphLink {
+    public Node first;
+    public Node last;
 
+    public void print() {
+        Node current = first;
+        while (current != null) {
+            System.out.print("[" + current.value + "] ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
+    public void insert(int value) {
+        Node node = new Node(value);
+        if (first == null) {
+            first = node;
+            last = node;
+        } else {
+            last.next = node;
+            last = node;
+        }
+    }
 }
