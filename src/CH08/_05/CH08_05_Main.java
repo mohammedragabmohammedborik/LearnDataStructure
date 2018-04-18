@@ -5,8 +5,6 @@ package CH08._05;
  * https://blog.csdn.net/morewindows/article/details/6684558
  */
 public class CH08_05_Main {
-    static int process = 0;
-
     public static void main(String[] args) {
         int[] data = {6, 5, 9, 7, 2, 8};
         System.out.println("原始数据为:");
@@ -25,11 +23,6 @@ public class CH08_05_Main {
         left_idx = left + 1;
         right_idx = right;
         while (true) {
-            System.out.print("[处理过程" + (process++) + "]=> ");
-            for (int i = 0; i < data.length; i++) {
-                System.out.print("[" + data[i] + "] ");
-            }
-            System.out.println();
             for (int i = left + 1; i <= right; i++)  //2:由左向右找出一个键值大于data[left]者
             {
                 if (data[i] >= data[left]) {
